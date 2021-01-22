@@ -1,13 +1,18 @@
+import Base.BaseTest;
 import pages.MainPage;
 import org.junit.jupiter.api.Test;
 
-public class SampleTest extends BaseTest{
-
-    private MainPage mainPage;
+public class SampleTest extends BaseTest {
 
     @Test
     public void Test() {
-        System.out.println("Hello");
+
+        mainPage = new MainPage(driver);
+
+        mainPage.typeQuery("Wikipedia");
+
+        mainPage.clickQuery();
+
     }
 
 }
